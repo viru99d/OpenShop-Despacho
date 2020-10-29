@@ -14,9 +14,14 @@ namespace OpenShop___Despacho
         [STAThread]
         static void Main()
         {
+
+            Transporte.RegistrarTransporte();
+  
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PantallaPrincipal());
+
+            
         }
     }
 }
