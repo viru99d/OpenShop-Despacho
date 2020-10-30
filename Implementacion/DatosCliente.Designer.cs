@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.title2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.textDatosCliente = new System.Windows.Forms.ListView();
             this.Siguiente2 = new System.Windows.Forms.Button();
             this.Atras2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -37,27 +37,31 @@
             // title2
             // 
             this.title2.AutoSize = true;
-            this.title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title2.Location = new System.Drawing.Point(231, 71);
+            this.title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title2.Location = new System.Drawing.Point(297, 47);
+            this.title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(172, 25);
+            this.title2.Size = new System.Drawing.Size(286, 39);
             this.title2.TabIndex = 2;
             this.title2.Text = "Datos del cliente";
             // 
-            // listView1
+            // textDatosCliente
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(179, 115);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(277, 229);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.textDatosCliente.HideSelection = false;
+            this.textDatosCliente.Location = new System.Drawing.Point(248, 117);
+            this.textDatosCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.textDatosCliente.Name = "textDatosCliente";
+            this.textDatosCliente.Size = new System.Drawing.Size(368, 183);
+            this.textDatosCliente.TabIndex = 3;
+            this.textDatosCliente.UseCompatibleStateImageBehavior = false;
+            this.textDatosCliente.View = System.Windows.Forms.View.List;
             // 
             // Siguiente2
             // 
-            this.Siguiente2.Location = new System.Drawing.Point(472, 405);
+            this.Siguiente2.Location = new System.Drawing.Point(632, 348);
+            this.Siguiente2.Margin = new System.Windows.Forms.Padding(4);
             this.Siguiente2.Name = "Siguiente2";
-            this.Siguiente2.Size = new System.Drawing.Size(160, 49);
+            this.Siguiente2.Size = new System.Drawing.Size(213, 60);
             this.Siguiente2.TabIndex = 4;
             this.Siguiente2.Text = "SIGUIENTE";
             this.Siguiente2.UseVisualStyleBackColor = true;
@@ -65,9 +69,10 @@
             // 
             // Atras2
             // 
-            this.Atras2.Location = new System.Drawing.Point(32, 405);
+            this.Atras2.Location = new System.Drawing.Point(41, 348);
+            this.Atras2.Margin = new System.Windows.Forms.Padding(4);
             this.Atras2.Name = "Atras2";
-            this.Atras2.Size = new System.Drawing.Size(160, 49);
+            this.Atras2.Size = new System.Drawing.Size(213, 60);
             this.Atras2.TabIndex = 5;
             this.Atras2.Text = "ATRAS";
             this.Atras2.UseVisualStyleBackColor = true;
@@ -75,17 +80,21 @@
             // 
             // DatosCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(662, 493);
+            this.ClientSize = new System.Drawing.Size(883, 455);
             this.Controls.Add(this.Atras2);
             this.Controls.Add(this.Siguiente2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.textDatosCliente);
             this.Controls.Add(this.title2);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DatosCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Open Shop";
+            this.Load += new System.EventHandler(this.DatosCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.Label title2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView textDatosCliente;
         private System.Windows.Forms.Button Siguiente2;
         private System.Windows.Forms.Button Atras2;
     }

@@ -36,7 +36,7 @@
             // 
             // Siguiente2
             // 
-            this.Siguiente2.Location = new System.Drawing.Point(619, 501);
+            this.Siguiente2.Location = new System.Drawing.Point(617, 351);
             this.Siguiente2.Margin = new System.Windows.Forms.Padding(4);
             this.Siguiente2.Name = "Siguiente2";
             this.Siguiente2.Size = new System.Drawing.Size(213, 60);
@@ -47,7 +47,7 @@
             // 
             // Atras2
             // 
-            this.Atras2.Location = new System.Drawing.Point(53, 501);
+            this.Atras2.Location = new System.Drawing.Point(49, 351);
             this.Atras2.Margin = new System.Windows.Forms.Padding(4);
             this.Atras2.Name = "Atras2";
             this.Atras2.Size = new System.Drawing.Size(213, 60);
@@ -59,11 +59,11 @@
             // title2
             // 
             this.title2.AutoSize = true;
-            this.title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title2.Location = new System.Drawing.Point(235, 87);
+            this.title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title2.Location = new System.Drawing.Point(198, 85);
             this.title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(408, 31);
+            this.title2.Size = new System.Drawing.Size(545, 39);
             this.title2.TabIndex = 7;
             this.title2.Text = "Seleccione la empresa de correo";
             // 
@@ -77,10 +77,10 @@
             "Oca",
             "Ocasa",
             "Correo Argentino"});
-            this.transporte.Location = new System.Drawing.Point(289, 156);
+            this.transporte.Location = new System.Drawing.Point(281, 186);
             this.transporte.Margin = new System.Windows.Forms.Padding(4);
             this.transporte.Name = "transporte";
-            this.transporte.Size = new System.Drawing.Size(328, 24);
+            this.transporte.Size = new System.Drawing.Size(337, 24);
             this.transporte.TabIndex = 8;
             // 
             // SeleccionarTransporte
@@ -88,7 +88,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(883, 607);
+            this.ClientSize = new System.Drawing.Size(879, 454);
             this.Controls.Add(this.transporte);
             this.Controls.Add(this.title2);
             this.Controls.Add(this.Atras2);
@@ -98,7 +98,6 @@
             this.MinimizeBox = false;
             this.Name = "SeleccionarTransporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Open shop";
             this.Load += new System.EventHandler(this.SeleccionarTransporte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

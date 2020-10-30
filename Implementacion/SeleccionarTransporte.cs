@@ -47,12 +47,9 @@ namespace OpenShop___Despacho
                 string ArchivoTransporte = System.IO.File.ReadAllText("Transportes.json");
                 List<Transporte> transportesJson = JsonConvert.DeserializeObject<List<Transporte>>(ArchivoTransporte);
 
-                int pos = 1;
                 foreach (var transportes in transportesJson)
                 {
-                    transporte.Items.Add( transportes.nombre+" $" + transportes.precio);
-                    
-                    pos++;
+                    transporte.Items.Add(transportes.nombre+" $" + transportes.precio);
                 }
             }
         }
