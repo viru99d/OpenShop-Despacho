@@ -37,7 +37,7 @@
             // 
             this.title1.AutoSize = true;
             this.title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title1.Location = new System.Drawing.Point(138, 84);
+            this.title1.Location = new System.Drawing.Point(138, 49);
             this.title1.Name = "title1";
             this.title1.Size = new System.Drawing.Size(413, 73);
             this.title1.TabIndex = 2;
@@ -45,7 +45,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 200);
+            this.button1.Location = new System.Drawing.Point(212, 156);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 57);
             this.button1.TabIndex = 7;
@@ -55,7 +55,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(223, 300);
+            this.button2.Location = new System.Drawing.Point(212, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(242, 57);
             this.button2.TabIndex = 8;
@@ -68,7 +68,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(660, 493);
+            this.ClientSize = new System.Drawing.Size(660, 370);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.title1);

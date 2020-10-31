@@ -34,29 +34,41 @@ namespace OpenShop___Despacho
 
         private void DatosCliente_Load(object sender, EventArgs e)
         {
-            rellenarDatosCliente();
+                rellenarDatosCliente();
+            
         }
         void rellenarDatosCliente()
         {
+            string usuario ="";
+            string nombreyApellido ="";
+            string dni = "";
+            string domicilio ="";
+            string telefono ="";
+            string email ="";
+
             if (System.IO.File.Exists("Carrito.json"))
             {
                 string ArchivoCarrito = System.IO.File.ReadAllText("Carrito.json");
                 List<Venta> carritoJson = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
-               
+
                 foreach (var carrito in carritoJson)
                 {
-                    textDatosCliente.Items.Add("Usuario: " + carrito.cliente.usuario);
-                    textDatosCliente.Items.Add("Nombre y apellido: "+ carrito.cliente.nombre +" " +carrito.cliente.apellido);
-                    textDatosCliente.Items.Add("DNI: " + carrito.cliente.dni);
-                    textDatosCliente.Items.Add("Domicilio: " + carrito.cliente.domicilio);
-                    textDatosCliente.Items.Add("Teléfono: " + carrito.cliente.telefono);
-                    textDatosCliente.Items.Add("Email: " + carrito.cliente.mail);
-
-
+                    usuario = carrito.cliente.usuario;
+                    nombreyApellido = carrito.cliente.nombre + " " + carrito.cliente.apellido;
+                    dni = carrito.cliente.dni;
+                    domicilio = carrito.cliente.domicilio;
+                    telefono = carrito.cliente.telefono;
+                    email = carrito.cliente.mail;
                 }
+
+                textDatosCliente.Items.Add("Usuario: " + usuario);
+                textDatosCliente.Items.Add("Nombre y apellido: " + nombreyApellido);
+                textDatosCliente.Items.Add("DNI: " + dni);
+                textDatosCliente.Items.Add("Domicilio: " + domicilio);
+                textDatosCliente.Items.Add("Teléfono: " + telefono);
+                textDatosCliente.Items.Add("Email: " + email);
+
             }
         }
-
-        
     }
 }
