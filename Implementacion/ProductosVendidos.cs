@@ -15,7 +15,7 @@ namespace OpenShop___Despacho
         {
             using (DatosCliente ventanaDatosCliente = new DatosCliente())
                 ventanaDatosCliente.ShowDialog();
-            this.Close();
+           
         }
 
         private void ProductosVendidos_Load(object sender, System.EventArgs e)
@@ -25,19 +25,30 @@ namespace OpenShop___Despacho
 
         void rellenarCampoProductosVendidos()
         {
-            if (System.IO.File.Exists("Carrito.json"))
+            if (System.IO.File.Exists("Cobranza.json"))
             {
-                string ArchivoCarrito = System.IO.File.ReadAllText("Carrito.json");
-                List<Venta> carritoJson = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
+                string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
+                List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
 
-                foreach (var carrito in carritoJson)
+                int venta = 1;
+               
+                foreach (var archivoCobranza in ArchivoCobranza)
                 {
-                    dataProductosVendidos.Rows.Add(carrito.productos.nombre, carrito.productos.marca, carrito.productos.precio, carrito.productos.descripcion);
+
+                    if(archivoCobranza.idVenta == venta)
+                    {
+                        dataProductosVendidos.Rows.Add(archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion);
+                    }
+                    
                 }
+
+                venta++;
             }
 
 
             
         }
+
+     
     }
 }

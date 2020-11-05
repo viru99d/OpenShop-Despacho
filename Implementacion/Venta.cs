@@ -29,34 +29,5 @@ namespace OpenShop___Despacho
 
         public static List<Venta> Ventas = new List<Venta>();
 
-
-        public static void MostrarVenta()
-        {
-            int pos = 1;
-            Console.WriteLine("\nLISTA DE VENTAS:");
-
-            if (System.IO.File.Exists("JSON - Carrito.json"))
-            {
-                string ArchivoVenta = System.IO.File.ReadAllText("JSON - Carrito.json");
-                List<Venta> ventasRecibidasJson = JsonConvert.DeserializeObject<List<Venta>>(ArchivoVenta);
-
-
-                foreach (var ventas in ventasRecibidasJson)
-                {
-                    Console.WriteLine("-" + pos + "\n");
-                    Console.WriteLine(ventas.idVenta);
-                    Console.WriteLine(ventas.cliente.apellido);
-                    Console.WriteLine(ventas.cliente.mail);
-                    Console.WriteLine(ventas.cliente.usuario);
-                    Console.WriteLine(ventas.cliente.contrasena);
-                    Console.WriteLine(ventas.cliente.dni);
-                    Console.WriteLine(ventas.cliente.domicilio);
-
-
-                }
-                pos++;
-            }
-        }
-
     }
 }

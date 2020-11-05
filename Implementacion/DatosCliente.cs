@@ -20,8 +20,6 @@ namespace OpenShop___Despacho
 
         private void Atras2_Click(object sender, EventArgs e)
         {
-            using (ProductosVendidos ventanaProductosVendidos = new ProductosVendidos())
-                ventanaProductosVendidos.ShowDialog();
             this.Close();
         }
 
@@ -29,7 +27,6 @@ namespace OpenShop___Despacho
         {
             using (SeleccionarTransporte ventanaSeleccionarTransporte = new SeleccionarTransporte())
                 ventanaSeleccionarTransporte.ShowDialog();
-            this.Close();
         }
 
         private void DatosCliente_Load(object sender, EventArgs e)
@@ -39,35 +36,35 @@ namespace OpenShop___Despacho
         }
         void rellenarDatosCliente()
         {
-            string usuario ="";
+            int venta = 1;
             string nombreyApellido ="";
-            string dni = "";
             string domicilio ="";
-            string telefono ="";
-            string email ="";
+            string codigoPostal ="";
+            string localidad = "";
 
-            if (System.IO.File.Exists("Carrito.json"))
+            if (System.IO.File.Exists("Cobranza.json"))
             {
-                string ArchivoCarrito = System.IO.File.ReadAllText("Carrito.json");
-                List<Venta> carritoJson = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
+                string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
+                List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
 
-                foreach (var carrito in carritoJson)
+                foreach (var archivoCobranza in ArchivoCobranza)
                 {
-                    usuario = carrito.cliente.usuario;
-                    nombreyApellido = carrito.cliente.nombre + " " + carrito.cliente.apellido;
-                    dni = carrito.cliente.dni;
-                    domicilio = carrito.cliente.domicilio;
-                    telefono = carrito.cliente.telefono;
-                    email = carrito.cliente.mail;
+                    if(archivoCobranza.idVenta == venta)
+                    {
+                        nombreyApellido = archivoCobranza.cliente.nombre + " " + archivoCobranza.cliente.apellido;
+                        domicilio = archivoCobranza.cliente.domicilio;
+                        localidad = archivoCobranza.cliente.localidad;
+                        codigoPostal = archivoCobranza.cliente.codigoPostal;
+                    }
+                   
                 }
 
-                textDatosCliente.Items.Add("Usuario: " + usuario);
                 textDatosCliente.Items.Add("Nombre y apellido: " + nombreyApellido);
-                textDatosCliente.Items.Add("DNI: " + dni);
+                textDatosCliente.Items.Add("Localidad: " + localidad);
                 textDatosCliente.Items.Add("Domicilio: " + domicilio);
-                textDatosCliente.Items.Add("Teléfono: " + telefono);
-                textDatosCliente.Items.Add("Email: " + email);
+                textDatosCliente.Items.Add("Código Postal: " + codigoPostal);
 
+                venta++;
             }
         }
     }
