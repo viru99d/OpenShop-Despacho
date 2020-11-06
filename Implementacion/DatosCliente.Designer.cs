@@ -41,17 +41,17 @@
             this.title2.Location = new System.Drawing.Point(297, 47);
             this.title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(286, 39);
+            this.title2.Size = new System.Drawing.Size(275, 38);
             this.title2.TabIndex = 2;
             this.title2.Text = "Datos del cliente";
             // 
             // textDatosCliente
             // 
             this.textDatosCliente.HideSelection = false;
-            this.textDatosCliente.Location = new System.Drawing.Point(248, 117);
+            this.textDatosCliente.Location = new System.Drawing.Point(247, 134);
             this.textDatosCliente.Margin = new System.Windows.Forms.Padding(4);
             this.textDatosCliente.Name = "textDatosCliente";
-            this.textDatosCliente.Size = new System.Drawing.Size(368, 183);
+            this.textDatosCliente.Size = new System.Drawing.Size(368, 146);
             this.textDatosCliente.TabIndex = 3;
             this.textDatosCliente.UseCompatibleStateImageBehavior = false;
             this.textDatosCliente.View = System.Windows.Forms.View.List;

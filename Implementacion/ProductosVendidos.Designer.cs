@@ -71,14 +71,13 @@
             this.MarcaProducto,
             this.DescripcionProducto});
             this.dataProductosVendidos.GridColor = System.Drawing.Color.DarkGray;
-            this.dataProductosVendidos.Location = new System.Drawing.Point(134, 54);
+            this.dataProductosVendidos.Location = new System.Drawing.Point(137, 94);
             this.dataProductosVendidos.Margin = new System.Windows.Forms.Padding(4);
             this.dataProductosVendidos.Name = "dataProductosVendidos";
             this.dataProductosVendidos.ReadOnly = true;
             this.dataProductosVendidos.RowHeadersWidth = 51;
-            this.dataProductosVendidos.Size = new System.Drawing.Size(608, 297);
+            this.dataProductosVendidos.Size = new System.Drawing.Size(608, 241);
             this.dataProductosVendidos.TabIndex = 2;
-       
             // 
             // NombreProducto
             // 

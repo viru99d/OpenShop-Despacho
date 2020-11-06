@@ -63,7 +63,7 @@
             this.title2.Location = new System.Drawing.Point(198, 85);
             this.title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(545, 39);
+            this.title2.Size = new System.Drawing.Size(525, 38);
             this.title2.TabIndex = 7;
             this.title2.Text = "Seleccione la empresa de correo";
             // 
@@ -82,6 +82,7 @@
             this.transporte.Name = "transporte";
             this.transporte.Size = new System.Drawing.Size(337, 24);
             this.transporte.TabIndex = 8;
+            this.transporte.SelectedIndexChanged += new System.EventHandler(this.transporte_SelectedIndexChanged);
             // 
             // SeleccionarTransporte
             // 

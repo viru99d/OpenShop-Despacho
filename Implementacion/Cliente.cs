@@ -15,14 +15,14 @@ namespace OpenShop___Despacho
         public string domicilio { get; set; }
         public string localidad { get; set; }
 
-        public Cliente(int idCliente, string nombre, string apellido, string mail, string dni, string domicilio, string telefono)
+        public Cliente(int idCliente, string nombre, string apellido, string codigoPostal, string dni, string domicilio, string localidad)
         {
             this.idCliente = idCliente;
             this.nombre = nombre;
             this.apellido = apellido;
-            this.codigoPostal = mail;
+            this.codigoPostal = codigoPostal;
             this.domicilio = domicilio;
-            this.localidad = telefono;
+            this.localidad = localidad;
         }
 
     }

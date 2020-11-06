@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,7 +41,7 @@ namespace OpenShop___Despacho
 
         }
 
-        void rellenarComboBoxTransporte()
+        public void rellenarComboBoxTransporte()
         {
             if (System.IO.File.Exists("Transportes.json"))
             {
@@ -54,6 +55,9 @@ namespace OpenShop___Despacho
             }
         }
 
-        
+        private void transporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.transporte.SelectedItem.ToString());
+        }
     }
 }
