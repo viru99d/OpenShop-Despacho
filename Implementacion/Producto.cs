@@ -11,19 +11,18 @@ namespace OpenShop___Despacho
         public int idProducto { get; set; }
         public string nombre { get; set; }
         public string marca { get; set; }
-        public float precio { get; set; }
         public string descripcion { get; set; }
-        public int stock { get; set; }
-
-        public Producto(int idProducto, string nombre, string marca, float precio, string descripcion, int stock)
+        
+        public Producto(int idProducto, string nombre, string marca, string descripcion)
         {
             this.idProducto = idProducto;
             this.nombre = nombre;
             this.marca = marca;
-            this.precio = precio;
             this.descripcion = descripcion;
-            this.stock = stock;
+           
         }
+
+        public static List<Producto> Productos = new List<Producto>();
 
     }
 }

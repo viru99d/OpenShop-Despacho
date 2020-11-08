@@ -57,7 +57,38 @@ namespace OpenShop___Despacho
 
         private void transporte_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(this.transporte.SelectedItem.ToString());
+            string correoElegido = this.transporte.SelectedItem.ToString();
+            string correoArgentino = "Correo Argentino $900";
+            string ocasa = "Ocasa $800";
+            string oca = "Oca $750";
+            string andreani = "Andreani $1000";
+            int indice = 0;
+            int idPedido = 1;
+
+            if (correoElegido == correoArgentino)
+            {
+                indice = 1;
+            }
+
+            if (correoElegido == ocasa)
+            {
+                indice = 2;
+            }
+
+            if (correoElegido == oca)
+            {
+                indice = 3;
+            }
+
+            if (correoElegido == andreani)
+            {
+                indice = 4;
+            }
+
+
+            Pedido.Pedidos.Add(new Pedido(idPedido, Producto.Productos, 9.543f, Transporte.Transportes[indice]));
+            idPedido++;
+
         }
     }
 }

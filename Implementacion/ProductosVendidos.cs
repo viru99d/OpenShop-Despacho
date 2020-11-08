@@ -38,15 +38,13 @@ namespace OpenShop___Despacho
                     if(archivoCobranza.idVenta == venta)
                     {
                         dataProductosVendidos.Rows.Add(archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion);
+                        Producto.Productos.Add(new Producto(archivoCobranza.productos.idProducto, archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion));
                     }
                     
                 }
 
                 venta++;
             }
-
-
-            
         }
 
      
