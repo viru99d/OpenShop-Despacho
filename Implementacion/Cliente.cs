@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace OpenShop___Despacho
         public string domicilio { get; set; }
         public string localidad { get; set; }
 
-        public Cliente(int idCliente, string nombre, string apellido, string codigoPostal, string dni, string domicilio, string localidad)
+        public Cliente(int idCliente, string nombre, string apellido, string codigoPostal, string domicilio, string localidad)
         {
             this.idCliente = idCliente;
             this.nombre = nombre;
@@ -25,5 +26,9 @@ namespace OpenShop___Despacho
             this.localidad = localidad;
         }
 
+        public static List<Cliente> Clientes = new List<Cliente>();
+
+       
     }
+
 }

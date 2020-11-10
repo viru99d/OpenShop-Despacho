@@ -20,6 +20,7 @@ namespace OpenShop___Despacho
 
         private void ProductosVendidos_Load(object sender, System.EventArgs e)
         {
+            Producto.Productos.Clear();
             rellenarCampoProductosVendidos();
         }
 

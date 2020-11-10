@@ -85,10 +85,18 @@ namespace OpenShop___Despacho
                 indice = 4;
             }
 
-
             Pedido.Pedidos.Add(new Pedido(idPedido, Producto.Productos, 9.543f, Transporte.Transportes[indice]));
             idPedido++;
 
+            completarEnvio();
+        }
+
+        public void completarEnvio()
+        {
+            int contadorDeEnvios = 1;
+            Envio.Envios.Add(new Envio(contadorDeEnvios, DateTime.Now, "Guemes 779", Pedido.Pedidos[0], Cliente.Clientes[0]));
+
+            contadorDeEnvios++;
         }
     }
 }

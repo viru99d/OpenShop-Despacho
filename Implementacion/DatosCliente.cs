@@ -37,10 +37,13 @@ namespace OpenShop___Despacho
         void rellenarDatosCliente()
         {
             int venta = 1;
-            string nombreyApellido ="";
+            int idCliente = 0;
+            string nombre ="";
+            string apellido = "";
             string domicilio ="";
             string codigoPostal ="";
             string localidad = "";
+            
 
             if (System.IO.File.Exists("Cobranza.json"))
             {
@@ -51,18 +54,24 @@ namespace OpenShop___Despacho
                 {
                     if(archivoCobranza.idVenta == venta)
                     {
-                        nombreyApellido = archivoCobranza.cliente.nombre + " " + archivoCobranza.cliente.apellido;
+                        idCliente = archivoCobranza.cliente.idCliente;
+                        nombre = archivoCobranza.cliente.nombre;
+                        apellido= archivoCobranza.cliente.apellido;
+                        codigoPostal = archivoCobranza.cliente.codigoPostal;
                         domicilio = archivoCobranza.cliente.domicilio;
                         localidad = archivoCobranza.cliente.localidad;
-                        codigoPostal = archivoCobranza.cliente.codigoPostal;
+                   
+                        
                     }
                    
                 }
 
-                textDatosCliente.Items.Add("Nombre y apellido: " + nombreyApellido);
+                textDatosCliente.Items.Add("Nombre y apellido: " + nombre +"" + apellido);
                 textDatosCliente.Items.Add("Localidad: " + localidad);
                 textDatosCliente.Items.Add("Domicilio: " + domicilio);
                 textDatosCliente.Items.Add("Código Postal: " + codigoPostal);
+
+                Cliente.Clientes.Add(new Cliente(idCliente, nombre, apellido, codigoPostal, domicilio, localidad));
 
                 venta++;
             }

@@ -92,7 +92,6 @@
       <DependentUpon>SeleccionarTransporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Transporte.cs" />
-    <Compile Include="Vendedor.cs" />
     <Compile Include="Venta.cs" />
     <EmbeddedResource Include="DatosCliente.resx">
       <DependentUpon>DatosCliente.cs</DependentUpon>
