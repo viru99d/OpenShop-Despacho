@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace OpenShop___Despacho
 {
+   
     public partial class SeleccionarTransporte : Form
     {
+        int id = 0;
         public SeleccionarTransporte()
         {
             InitializeComponent();
@@ -67,22 +69,22 @@ namespace OpenShop___Despacho
 
             if (correoElegido == correoArgentino)
             {
-                indice = 1;
+                indice = 0;
             }
 
             if (correoElegido == ocasa)
             {
-                indice = 2;
+                indice = 1;
             }
 
             if (correoElegido == oca)
             {
-                indice = 3;
+                indice = 2;
             }
 
             if (correoElegido == andreani)
             {
-                indice = 4;
+                indice = 3;
             }
 
             Pedido.Pedidos.Add(new Pedido(idPedido, Producto.Productos, 9.543f, Transporte.Transportes[indice]));
@@ -94,9 +96,13 @@ namespace OpenShop___Despacho
         public void completarEnvio()
         {
             int contadorDeEnvios = 1;
-            Envio.Envios.Add(new Envio(contadorDeEnvios, DateTime.Now, "Guemes 779", Pedido.Pedidos[0], Cliente.Clientes[0]));
+            Envio.Envios.Add(new Envio(contadorDeEnvios, DateTime.Now.ToString("MM/dd/yyyy HH:mm"), Pedido.Pedidos[id], Cliente.Clientes[id]));
+            
+            var envioJson= JsonConvert.SerializeObject(Envio.Envios, Formatting.Indented);
+            System.IO.File.WriteAllText("Envios.Json", envioJson);
 
             contadorDeEnvios++;
+            id++;
         }
     }
 }

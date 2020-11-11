@@ -66,8 +66,8 @@ namespace OpenShop___Despacho
                    
                 }
 
-                textDatosCliente.Items.Add("Nombre y apellido: " + nombre +"" + apellido);
-                textDatosCliente.Items.Add("Localidad: " + localidad);
+                textDatosCliente.Items.Add("Nombre y apellido: " + nombre +" " + apellido);
+                textDatosCliente.Items.Add("Localidad: "  + localidad);
                 textDatosCliente.Items.Add("Domicilio: " + domicilio);
                 textDatosCliente.Items.Add("Código Postal: " + codigoPostal);
 
@@ -76,5 +76,7 @@ namespace OpenShop___Despacho
                 venta++;
             }
         }
+
+        
     }
 }
