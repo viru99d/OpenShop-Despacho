@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop___Despacho
 {
-    class Envio
+    public class Envio
     {
         public int idEnvio { get; set; }
         public string fecha { get; set; }

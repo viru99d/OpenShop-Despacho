@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop___Despacho
 {
-    class Venta
+    public class Venta
     { 
         public int idVenta { get; set; }
         public DateTime fecha { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop___Despacho
 {
-    class Cliente
+    public class Cliente
     {
         public int idCliente { get; set; }
         public string nombre { get; set; }
@@ -25,10 +25,7 @@ namespace OpenShop___Despacho
             this.domicilio = domicilio;
             this.localidad = localidad;
         }
-
         public static List<Cliente> Clientes = new List<Cliente>();
-
-       
     }
 
 }

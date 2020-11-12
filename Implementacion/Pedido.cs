@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop___Despacho
 { 
-    class Pedido
+    public class Pedido
     {
         public int idPedido { get; set; }
         public List<Producto> productos { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop___Despacho
 {
-    class Transporte
+    public class Transporte
     {
         public int idTransporte { get; set; }
         public string nombre { get; set; }
