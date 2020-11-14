@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Siguiente2 = new System.Windows.Forms.Button();
-            this.Atras2 = new System.Windows.Forms.Button();
             this.title2 = new System.Windows.Forms.Label();
             this.transporte = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -44,17 +43,6 @@
             this.Siguiente2.Text = "SIGUIENTE";
             this.Siguiente2.UseVisualStyleBackColor = true;
             this.Siguiente2.Click += new System.EventHandler(this.Siguiente2_Click);
-            // 
-            // Atras2
-            // 
-            this.Atras2.Location = new System.Drawing.Point(49, 351);
-            this.Atras2.Margin = new System.Windows.Forms.Padding(4);
-            this.Atras2.Name = "Atras2";
-            this.Atras2.Size = new System.Drawing.Size(213, 60);
-            this.Atras2.TabIndex = 6;
-            this.Atras2.Text = "ATRAS";
-            this.Atras2.UseVisualStyleBackColor = true;
-            this.Atras2.Click += new System.EventHandler(this.Atras2_Click);
             // 
             // title2
             // 
@@ -92,7 +80,6 @@
             this.ClientSize = new System.Drawing.Size(879, 454);
             this.Controls.Add(this.transporte);
             this.Controls.Add(this.title2);
-            this.Controls.Add(this.Atras2);
             this.Controls.Add(this.Siguiente2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -108,7 +95,6 @@
         #endregion
 
         private System.Windows.Forms.Button Siguiente2;
-        private System.Windows.Forms.Button Atras2;
         private System.Windows.Forms.Label title2;
         private System.Windows.Forms.ComboBox transporte;
     }

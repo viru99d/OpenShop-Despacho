@@ -30,7 +30,6 @@
         {
             this.title1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textDetallesPedido = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -42,7 +41,7 @@
             this.title1.Location = new System.Drawing.Point(297, 36);
             this.title1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(327, 39);
+            this.title1.Size = new System.Drawing.Size(312, 38);
             this.title1.TabIndex = 2;
             this.title1.Text = "Detalles del pedido";
             // 
@@ -56,17 +55,6 @@
             this.button1.Text = "TERMINAR ENVÍO";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(42, 338);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 60);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "ATRAS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textDetallesPedido
             // 
@@ -98,7 +86,6 @@
             this.ClientSize = new System.Drawing.Size(880, 453);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textDetallesPedido);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.title1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -117,7 +104,6 @@
 
         private System.Windows.Forms.Label title1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView textDetallesPedido;
         private System.Windows.Forms.Label label1;
     }

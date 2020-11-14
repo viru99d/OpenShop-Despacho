@@ -15,7 +15,8 @@ namespace OpenShop___Despacho
         {
             using (DatosCliente ventanaDatosCliente = new DatosCliente())
                 ventanaDatosCliente.ShowDialog();
-           
+            this.Close();
+
         }
 
         private void ProductosVendidos_Load(object sender, System.EventArgs e)

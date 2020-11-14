@@ -39,12 +39,12 @@
             // 
             // Siguiente1
             // 
-            this.Siguiente1.Location = new System.Drawing.Point(653, 380);
+            this.Siguiente1.Location = new System.Drawing.Point(639, 371);
             this.Siguiente1.Margin = new System.Windows.Forms.Padding(4);
             this.Siguiente1.Name = "Siguiente1";
             this.Siguiente1.Size = new System.Drawing.Size(213, 60);
             this.Siguiente1.TabIndex = 0;
-            this.Siguiente1.Text = "Siguiente";
+            this.Siguiente1.Text = "SIGUIENTE";
             this.Siguiente1.UseVisualStyleBackColor = true;
             this.Siguiente1.Click += new System.EventHandler(this.Siguiente1_Click);
             // 

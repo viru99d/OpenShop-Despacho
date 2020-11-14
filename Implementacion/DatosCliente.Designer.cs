@@ -31,7 +31,6 @@
             this.title2 = new System.Windows.Forms.Label();
             this.textDatosCliente = new System.Windows.Forms.ListView();
             this.Siguiente2 = new System.Windows.Forms.Button();
-            this.Atras2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title2
@@ -41,7 +40,7 @@
             this.title2.Location = new System.Drawing.Point(297, 47);
             this.title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(358, 49);
+            this.title2.Size = new System.Drawing.Size(275, 38);
             this.title2.TabIndex = 2;
             this.title2.Text = "Datos del cliente";
             // 
@@ -68,24 +67,12 @@
             this.Siguiente2.UseVisualStyleBackColor = true;
             this.Siguiente2.Click += new System.EventHandler(this.Siguiente2_Click);
             // 
-            // Atras2
-            // 
-            this.Atras2.Location = new System.Drawing.Point(41, 348);
-            this.Atras2.Margin = new System.Windows.Forms.Padding(4);
-            this.Atras2.Name = "Atras2";
-            this.Atras2.Size = new System.Drawing.Size(213, 60);
-            this.Atras2.TabIndex = 5;
-            this.Atras2.Text = "ATRAS";
-            this.Atras2.UseVisualStyleBackColor = true;
-            this.Atras2.Click += new System.EventHandler(this.Atras2_Click);
-            // 
             // DatosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(883, 455);
-            this.Controls.Add(this.Atras2);
             this.Controls.Add(this.Siguiente2);
             this.Controls.Add(this.textDatosCliente);
             this.Controls.Add(this.title2);
@@ -106,6 +93,5 @@
         private System.Windows.Forms.Label title2;
         private System.Windows.Forms.ListView textDatosCliente;
         private System.Windows.Forms.Button Siguiente2;
-        private System.Windows.Forms.Button Atras2;
     }
 }

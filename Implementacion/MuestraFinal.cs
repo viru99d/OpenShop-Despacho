@@ -27,6 +27,7 @@ namespace OpenShop___Despacho
         {
              using (PantallaFinal ventanaPantallaFinal = new PantallaFinal())
                 ventanaPantallaFinal.ShowDialog();
+            this.Close();
         }
 
         private void MuestraFinal_Load(object sender, EventArgs e)

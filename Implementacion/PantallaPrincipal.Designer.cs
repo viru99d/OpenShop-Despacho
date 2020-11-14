@@ -37,17 +37,19 @@
             // 
             this.title1.AutoSize = true;
             this.title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title1.Location = new System.Drawing.Point(138, 49);
+            this.title1.Location = new System.Drawing.Point(207, 61);
+            this.title1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(413, 73);
+            this.title1.Size = new System.Drawing.Size(512, 91);
             this.title1.TabIndex = 2;
             this.title1.Text = "OPEN SHOP";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(212, 156);
+            this.button1.Location = new System.Drawing.Point(283, 192);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 57);
+            this.button1.Size = new System.Drawing.Size(323, 70);
             this.button1.TabIndex = 7;
             this.button1.Text = "CONTINUAR ENVÍO";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(212, 254);
+            this.button2.Location = new System.Drawing.Point(283, 313);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(242, 57);
+            this.button2.Size = new System.Drawing.Size(323, 70);
             this.button2.TabIndex = 8;
             this.button2.Text = "SALIR";
             this.button2.UseVisualStyleBackColor = true;
@@ -65,13 +68,14 @@
             // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(660, 370);
+            this.ClientSize = new System.Drawing.Size(880, 455);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.title1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PantallaPrincipal";

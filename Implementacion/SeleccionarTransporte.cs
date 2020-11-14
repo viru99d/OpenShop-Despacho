@@ -28,37 +28,7 @@ namespace OpenShop___Despacho
 
         private void Siguiente2_Click(object sender, EventArgs e)
         {
-            using (MuestraFinal ventanaMuestraFinal = new MuestraFinal())
-                ventanaMuestraFinal.ShowDialog();
-        }
 
-        private void SeleccionarTransporte_Load(object sender, EventArgs e)
-        {
-            if (transporte.Items.Count == 4)
-            {
-                transporte.Items.Clear();
-                rellenarComboBoxTransporte();
-            }
-                
-
-        }
-
-        public void rellenarComboBoxTransporte()
-        {
-            if (System.IO.File.Exists("Transportes.json"))
-            {
-                string ArchivoTransporte = System.IO.File.ReadAllText("Transportes.json");
-                List<Transporte> transportesJson = JsonConvert.DeserializeObject<List<Transporte>>(ArchivoTransporte);
-
-                foreach (var transportes in transportesJson)
-                {
-                    transporte.Items.Add(transportes.nombre+" $" + transportes.precio);
-                }
-            }
-        }
-
-        private void transporte_SelectedIndexChanged(object sender, EventArgs e)
-        {
             string correoElegido = this.transporte.SelectedItem.ToString();
             string correoArgentino = "Correo Argentino $900";
             string ocasa = "Ocasa $800";
@@ -91,7 +61,39 @@ namespace OpenShop___Despacho
             idPedido++;
 
             completarEnvio();
+
+            using (MuestraFinal ventanaMuestraFinal = new MuestraFinal())
+                ventanaMuestraFinal.ShowDialog();
+            this.Close();
         }
+
+        private void SeleccionarTransporte_Load(object sender, EventArgs e)
+        {
+            Siguiente2.Enabled = false;
+
+            if (transporte.Items.Count == 4)
+            {
+                transporte.Items.Clear();
+                rellenarComboBoxTransporte();
+            }
+                
+
+        }
+
+        public void rellenarComboBoxTransporte()
+        {
+            if (System.IO.File.Exists("Transportes.json"))
+            {
+                string ArchivoTransporte = System.IO.File.ReadAllText("Transportes.json");
+                List<Transporte> transportesJson = JsonConvert.DeserializeObject<List<Transporte>>(ArchivoTransporte);
+
+                foreach (var transportes in transportesJson)
+                {
+                    transporte.Items.Add(transportes.nombre+" $" + transportes.precio);
+                }
+            }
+        }
+
 
         public void completarEnvio()
         {
@@ -103,6 +105,14 @@ namespace OpenShop___Despacho
 
             contadorDeEnvios++;
             id++;
+
+        }
+
+        private void transporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Siguiente2.Enabled = true;
+
+            MessageBox.Show("El transporte seleccionado fue: " + transporte.SelectedItem.ToString());
         }
     }
 }

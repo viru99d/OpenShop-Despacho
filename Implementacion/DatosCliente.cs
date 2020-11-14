@@ -27,6 +27,7 @@ namespace OpenShop___Despacho
         {
             using (SeleccionarTransporte ventanaSeleccionarTransporte = new SeleccionarTransporte())
                 ventanaSeleccionarTransporte.ShowDialog();
+            this.Close();
         }
 
         private void DatosCliente_Load(object sender, EventArgs e)
