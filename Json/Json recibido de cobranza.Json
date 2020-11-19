@@ -1,0 +1,23 @@
+[
+    {
+        "idVenta": 1,
+        "productos": 
+            {
+                "idProducto": 1,
+                "nombre": "Iphone 6s",
+                "marca": "Apple",
+                "descripcion": "Celular"
+            },
+            
+        "cliente": {
+            "nombre": "Alfredo",
+            "apellido": "Contreras",
+            "domicilio": "Guemes 324",
+            "localidad": "Devoto -Cordoba",
+            "codigoPostal": 2424
+        },
+
+        "ConfirmacionPago": "true"
+    }
+
+]

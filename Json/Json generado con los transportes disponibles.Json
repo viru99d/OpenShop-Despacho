@@ -1,0 +1,26 @@
+[
+  {
+    "idTransporte": 1,
+    "nombre": "Correo Argentino",
+    "domicilio": "Juan B Alberdi 198",
+    "precio": 900
+  },
+  {
+    "idTransporte": 2,
+    "nombre": "Ocasa",
+    "domicilio": "Av. Juan de Garay 1294",
+    "precio": 800
+  },
+  {
+    "idTransporte": 3,
+    "nombre": "Oca",
+    "domicilio": "Av. Urquiza 874",
+    "precio": 750
+  },
+  {
+    "idTransporte": 4,
+    "nombre": "Andreani",
+    "domicilio": "Bv. 9 de Julio 1852",
+    "precio": 1000
+  }
+]

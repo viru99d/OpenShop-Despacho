@@ -1,0 +1,20 @@
+[
+  {
+    "idProducto": 1,
+    "nombre": "Iphone 6s",
+    "marca": "Apple",
+    "descripcion": "Celular"
+  },
+  {
+    "idProducto": 2,
+    "nombre": "Galaxy S10",
+    "marca": "Samsung",
+    "descripcion": "Celular"
+  },
+  {
+    "idProducto": 3,
+    "nombre": "Smart TV 42''",
+    "marca": "Lg",
+    "descripcion": "Televisor"
+  }
+]

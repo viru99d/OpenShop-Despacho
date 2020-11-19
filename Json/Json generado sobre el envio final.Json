@@ -1,0 +1,44 @@
+[
+  {
+    "idEnvio": 1,
+    "fecha": "11/19/2020 14:27",
+    "pedido": {
+      "idPedido": 1,
+      "productos": [
+        {
+          "idProducto": 1,
+          "nombre": "Iphone 6s",
+          "marca": "Apple",
+          "descripcion": "Celular"
+        },
+        {
+          "idProducto": 2,
+          "nombre": "Galaxy S10",
+          "marca": "Samsung",
+          "descripcion": "Celular"
+        },
+        {
+          "idProducto": 3,
+          "nombre": "Smart TV 42''",
+          "marca": "Lg",
+          "descripcion": "Televisor"
+        }
+      ],
+      "peso": 9.543,
+      "transporte": {
+        "idTransporte": 3,
+        "nombre": "Oca",
+        "domicilio": "Av. Urquiza 874",
+        "precio": 750
+      }
+    },
+    "cliente": {
+      "idCliente": 0,
+      "nombre": "Alfredo",
+      "apellido": "Contreras",
+      "codigoPostal": "2424",
+      "domicilio": "Guemes 324",
+      "localidad": "Devoto - Cordoba"
+    }
+  }
+]

@@ -37,7 +37,7 @@ namespace OpenShop___Despacho
                 foreach (var archivoCobranza in ArchivoCobranza)
                 {
 
-                    if(archivoCobranza.idVenta == venta)
+                    if(archivoCobranza.idVenta == venta && archivoCobranza.confirmacionPago ==true)
                     {
                         dataProductosVendidos.Rows.Add(archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion);
                         Producto.Productos.Add(new Producto(archivoCobranza.productos.idProducto, archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion));
