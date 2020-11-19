@@ -68,6 +68,7 @@
             this.Name = "PantallaFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Open shop";
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 

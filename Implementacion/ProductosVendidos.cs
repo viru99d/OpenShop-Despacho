@@ -41,6 +41,11 @@ namespace OpenShop___Despacho
                     {
                         dataProductosVendidos.Rows.Add(archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion);
                         Producto.Productos.Add(new Producto(archivoCobranza.productos.idProducto, archivoCobranza.productos.nombre, archivoCobranza.productos.marca, archivoCobranza.productos.descripcion));
+
+                        var productosJson = JsonConvert.SerializeObject(Producto.Productos, Formatting.Indented);
+                        System.IO.File.WriteAllText("ProductosVendidos.Json", productosJson);
+
+
                     }
                     
                 }

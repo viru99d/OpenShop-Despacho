@@ -26,5 +26,7 @@ namespace OpenShop___Despacho
         {
             this.Close();
         }
+
+        
     }
 }
