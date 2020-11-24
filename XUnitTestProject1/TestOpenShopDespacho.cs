@@ -102,6 +102,7 @@ namespace testOpenShop
             }
             venta++;
         }
+        //
 
         [Fact]
         public void MarcaProductoValida()
