@@ -76,6 +76,11 @@ namespace OpenShop___Despacho
 
                 venta++;
             }
+            else
+            {
+                MessageBox.Show("Se produjo un error al cargar los datos del cliente, por favor contactese con Open Shop al numero que figura en el sitio web, disculpe las molestias ocasionadas");
+                this.Close();
+            }
         }
 
         

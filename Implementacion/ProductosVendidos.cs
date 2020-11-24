@@ -52,6 +52,11 @@ namespace OpenShop___Despacho
 
                 venta++;
             }
+            else
+            {
+                MessageBox.Show("No hay articulos vendidos o se produjo un error inesperado, por favor contactese con Open Shop al numero que figura en el sitio web, disculpe las molestias ocasionadas");
+                this.Close();
+            }
         }
 
      

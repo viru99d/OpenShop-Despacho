@@ -92,6 +92,11 @@ namespace OpenShop___Despacho
                     transporte.Items.Add(transportes.nombre+" $" + transportes.precio);
                 }
             }
+            else
+            {
+                MessageBox.Show("Se produjo un error al cargar los transportes, por favor contactese con Open Shop al numero que figura en el sitio web, disculpe las molestias ocasionadas");
+                this.Close();
+            }
         }
 
 

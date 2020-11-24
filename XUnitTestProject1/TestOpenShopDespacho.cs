@@ -25,10 +25,8 @@ namespace testOpenShop
         public void ProductosDeserializadosYCargadosCorrectamente()
         {
              Producto.Productos.Clear();
-            int cantidadDeProductos = 0;
+             int cantidadDeProductos = 0;
 
-            if (System.IO.File.Exists("Cobranza.json"))
-            {
                 string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
                 List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
 
@@ -43,7 +41,6 @@ namespace testOpenShop
                     }
                 }
                 venta++;
-            }
 
             Assert.Equal(cantidadDeProductos, Producto.Productos.Count);
         }
@@ -54,8 +51,6 @@ namespace testOpenShop
             Transporte.Transportes.Clear();
             int cantidadDeTransportes = 0;
 
-            if (System.IO.File.Exists("Transportes.json"))
-            {
                 string ArchivoTransporte = System.IO.File.ReadAllText("Transportes.json");
                 List<Transporte> transportesJson = JsonConvert.DeserializeObject<List<Transporte>>(ArchivoTransporte);
 
@@ -64,7 +59,7 @@ namespace testOpenShop
                     Transporte.Transportes.Add(new Transporte(transportes.idTransporte, transportes.nombre, transportes.domicilio, transportes.precio));
                     cantidadDeTransportes++;
                 }
-            }
+            
 
             Assert.Equal(cantidadDeTransportes, Transporte.Transportes.Count);
         }
@@ -82,6 +77,102 @@ namespace testOpenShop
                 ExisteArchivoJson = true;
             }
                 Assert.True(ExisteArchivoJson);
+        }
+
+        [Fact]
+        public void NombreProductoValido()
+        {
+            int venta = 1;
+            bool nombreValido = false;
+
+            string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
+            List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
+
+            foreach (var archivoCobranza in ArchivoCobranza)
+            {
+                if (archivoCobranza.idVenta == venta)
+                {
+                    if(archivoCobranza.productos.nombre != null)
+                    {
+                        nombreValido = true;
+                    }
+                    Assert.True(nombreValido);
+                    nombreValido = false;
+                }
+            }
+            venta++;
+        }
+
+        [Fact]
+        public void MarcaProductoValida()
+        {
+            int venta = 1;
+            bool MarcaValido = false;
+
+            string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
+            List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
+
+            foreach (var archivoCobranza in ArchivoCobranza)
+            {
+                if (archivoCobranza.idVenta == venta)
+                {
+                    if (archivoCobranza.productos.marca != null)
+                    {
+                        MarcaValido = true;
+                    }
+                    Assert.True(MarcaValido);
+                    MarcaValido = false;
+                }
+            }
+            venta++;
+        }
+
+        [Fact]
+        public void PrecioEnvioValido()
+        {
+            bool PrecioValido = false;
+
+            string ArchivoTransporte = System.IO.File.ReadAllText("Transportes.json");
+            List<Transporte> transportesJson = JsonConvert.DeserializeObject<List<Transporte>>(ArchivoTransporte);
+
+            foreach (var transportes in transportesJson)
+            {
+                if(transportes.precio >0 && transportes.precio.ToString() != null)
+                {
+                    PrecioValido = true;
+                }
+                Assert.True(PrecioValido);
+            }
+
+        }
+
+        [Fact]
+        public void DatosParaEnvioValidos()
+        {
+            int venta = 1;
+            bool datosParaEnvioValidos = false;
+
+            string ArchivoCarrito = System.IO.File.ReadAllText("Cobranza.json");
+            List<Venta> ArchivoCobranza = JsonConvert.DeserializeObject<List<Venta>>(ArchivoCarrito);
+
+            foreach (var archivoCobranza in ArchivoCobranza)
+            {
+                if (archivoCobranza.idVenta == venta)
+                {
+                    if (archivoCobranza.cliente.nombre != null && 
+                           archivoCobranza.cliente.apellido != null && 
+                           archivoCobranza.cliente.domicilio != null &&
+                           archivoCobranza.cliente.codigoPostal != null &&
+                           archivoCobranza.cliente.localidad != null)
+                    {
+                        datosParaEnvioValidos = true;
+                    }
+                    Assert.True(datosParaEnvioValidos);
+                    datosParaEnvioValidos = false;
+                }
+            }
+            venta++;
+
         }
     }
 }

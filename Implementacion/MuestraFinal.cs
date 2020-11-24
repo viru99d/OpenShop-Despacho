@@ -72,6 +72,11 @@ namespace OpenShop___Despacho
                 envio++;
             }
 
+            else
+            {
+                MessageBox.Show("Se produjo un error al cargar los detalles de su pedido, por favor contactese con Open Shop al numero que figura en el sitio web, disculpe las molestias ocasionadas");
+                this.Close();
+            }
 
 
         }
